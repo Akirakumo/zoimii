@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zoimii</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<link rel="stylesheet" href="css/zoimii.css">
+</head>
+<body>
+	<!-- 背景canvas -->
+	<canvas height="926" width="1920" id="c_n1"></canvas>
+	<!-- <div id="m-mask"></div> -->
+
+	<div class="welcome-words">
+		<p class="p1">Welcome</p>
+		<p class="p2">to</p>
+		<p class="p3">Zoimii</p>
+	</div>
+
+
+
+
+	<!-- 导航栏start -->
+	<div class="nav clearfix">
+
+		<!-- logo -->
+		<div class="nav-logo">
+			<img src="svg/zoimii.svg" alt="" class="nav-logo-svg">
+		</div>
+
+		<!-- 右上角菜单开关按钮 -->
+		<div class="nav-menu">
+			<svg class="nav-menu-svg" width="24" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.5 20.14">
+	            <g>
+	            	<path class="nav-menu-svg1" d="M25.5,2H1A1,1,0,0,1,1,0H25.5a1,1,0,0,1,0,2Z"></path>
+					<path class="nav-menu-svg2" d="M25.5,10.07H1a1,1,0,1,1,0-2H25.5a1,1,0,1,1,0,2Z"></path>
+					<path class="nav-menu-svg3" d="M25.5,18.14H1a1,1,0,0,1,0-2H25.5a1,1,0,0,1,0,2Z"></path>
+	            </g>
+	        </svg>
+	        <svg class="nav-menu-svg-close hide" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
+	            <g>
+	              <path d="M10.5,11.92.29,1.71A1,1,0,0,1,1.71.29l8.8,8.79L19.3.29a1,1,0,0,1,1.41,1.41Z"></path>
+	              <path d="M20,21a1,1,0,0,1-.71-.29l-8.8-8.79-8.8,8.79A1,1,0,0,1,.29,19.3L10.5,9.09,20.71,19.3A1,1,0,0,1,20,21Z"></path>
+	            </g>
+        	</svg>
+		</div>
+
+		<!-- 下拉菜单start -->
+		<div class="nav-menu-main hide">
+
+			<div class="nav-menu-title hide">
+				<p class="active">Website</p>
+				<span>/</span>
+				<p>About</p>
+			</div>
+
+			<div class="nav-menu-content hide">
+
+				<table class="nav-menu-web">
+					<tr>
+						<td>
+							<a href="https://www.baidu.com" target="_blank">百度一下,你就知道</a>
+						</td>
+						<td>
+							<a href="https://www.google.hk" target="_blank">Google一下,Not Found</a>
+						</td>
+						<td>
+							<a href="http://cn.bing.com/" target="_blank">必应 bing</a>
+						</td>
+						<td>
+							<a href="https://www.yahoo.com/" target="_blank">雅虎 yahoo！</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="https://www.bilibili.com" target="_blank">bilibili(゜-゜)つロ 干杯~</title></a>
+						</td>
+						<td>
+							<a href="http://www.acfun.cn/" target="_blank">猴山ACFun</a>
+						</td>
+						<td>
+							<a href="https://www.youtube.com" target="_blank">YouTube-你,管</a>
+						</td>
+						<td>
+							<a href="http://www.nicovideo.jp/" target="_blank">niconico动画</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="https://twitter.com/" target="_blank">推特-聚焦当下</a>
+						</td>
+						<td>
+							<a href="https://weibo.com" target="_blank">新浪微博-发现新鲜事</a>
+						</td>
+						<td>
+							<a href="https://www.facebook.com/" target="_blank">Facebook,现充的世界</a>
+						</td>
+						<td>
+							<a href="https://www.bilibili.com" target="_blank">盛大招商,财富共享</a>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<a href="https://www.bilibili.com" target="_blank">广告招商,全场热链</a>
+						</td>
+						<td>
+							<a href="https://www.bilibili.com" target="_blank">一次招商,四大受益</a>
+						</td>
+						<td>
+							<a href="https://www.bilibili.com" target="_blank">盛大招商,财富共享</a>
+						</td>
+						<td>
+							<a href="https://www.bilibili.com" target="_blank">一次招商,四大受益</a>
+						</td>
+					</tr>
+						<tr>
+						<td>
+							<a href="https://www.bilibili.com" target="_blank">广告招商,全场热链</a>
+						</td>
+						<td>
+							<a href="https://www.bilibili.com" target="_blank">一次招商,四大受益</a>
+						</td>
+						<td>
+							<a href="https://www.bilibili.com" target="_blank">盛大招商,财富共享</a>
+						</td>
+					</tr>				
+				</table>
+
+				<div class="nav-menu-about hide">
+					<div>
+						<h3>What Is This?</h3>
+						<p>一个用尽了毕生智慧敲出来的网站网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍</p>
+						<a href="https://weibo.com/616710442" target="_blank">@死宅不要整天做梦</a><span>的微博</span>
+					</div>
+				</div>
+
+			</div> 
+
+		</div>
+		<!-- 下拉菜单end -->
+
+		<!-- 内容区关闭按钮 -->
+		<button class="m-close">
+			<svg class="m-close-svg" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+				<path d="M10.5,11.92.29,1.71A1,1,0,0,1,1.71.29l8.8,8.79L19.3.29a1,1,0,0,1,1.41,1.41Z"></path>
+				<path d="M20,21a1,1,0,0,1-.71-.29l-8.8-8.79-8.8,8.79A1,1,0,0,1,.29,19.3L10.5,9.09,20.71,19.3A1,1,0,0,1,20,21Z"></path>
+			</svg>
+		</button>
+
+	</div>
+	<!-- 导航栏end -->
+
+
+
+	<!-- 主内容区 -->
+	<div class="main">
+
+		<!-- 内容区banner -->
+		<div class="banner">
+
+			<ul class="b-content clearfix">
+
+				<li class="b-one con-selected">			
+					<div class="title" style="font-size:100px;">
+						<h2>简 历<h3 style="font-size:22px;">了解一下</h3></h2>
+					</div>
+					<div class="num">
+						<h2>One</h2>
+					</div>
+					<div class="b-one-img1">
+						<div class="photo"><p>照片</p></div>
+						<div class="block1"></div>
+						<div class="block2"></div>
+						<div class="block3"></div>
+					</div>
+					<div class="b-one-img2">
+						<div class="info">
+							<p>姓名:__________</p>
+							<p>性别:__________</p>
+							<p>年龄:__________</p>
+							<p>联系:__________</p>
+						</div>
+					</div>
+				</li>
+				
+				<li class="b-two">
+					<div class="title">
+						<h2>玩个蛇</h2>
+					</div>
+					<div class="num">
+						<h2>Two</h2>
+					</div>
+					<div class="b-two-titAnime hide">
+						<div class="die-svg">
+							<img src="svg/die-svg1.svg" alt="" class="die-svg1">							
+							<img src="svg/die-svg2.svg" alt="" class="die-svg2">
+						</div>
+						<div class="b-two-snake">
+							<div></div><div></div><div></div><div></div><div></div><div></div>
+						</div>
+					</div>
+				</li>
+
+				<li class="b-three">
+
+					<div class="title">
+						中午吃什么
+					</div>
+
+					<div class="num">
+						Three
+					</div>
+
+				</li>
+
+				<li class="b-four">
+
+					<div class="title">
+						晚上吃什么
+					</div>
+
+					<div class="num">
+						Four
+					</div>
+
+				</li>
+
+				<li class="b-five">
+
+					<div class="title">
+						听个歌
+					</div>
+
+					<div class="num">
+						Five
+					</div>
+
+				</li>
+
+				<li class="b-six">
+
+					<div class="title">
+						看个戏
+					</div>
+
+					<div class="num">
+						Six
+					</div>
+
+				</li>
+
+				<li class="b-seven">
+
+					<div class="title">
+						瘫会儿
+					</div>
+
+					<div class="num">
+						Seven
+					</div>
+
+				</li>
+
+				<li class="b-eight">
+
+					<div class="title">
+						瘫会儿
+					</div>
+
+					<div class="num">
+						Eight
+					</div>
+
+				</li>
+
+				<li class="b-nine">
+
+					<div class="title">
+						瘫会儿
+					</div>
+
+					<div class="num">
+						Nine
+					</div>
+
+				</li>
+
+			</ul>
+
+			<div class="b-button clearfix">
+				<div class="b-button-btn clearfix">
+					<a href="javascript:;" class="btn-a1 btn-selected">1</a>
+					<a href="javascript:;" class="btn-a2">2</a>
+					<a href="javascript:;" class="btn-a3">3</a>
+					<a href="javascript:;" class="btn-a4">4</a>
+					<a href="javascript:;" class="btn-a5">5</a>
+					<a href="javascript:;" class="btn-a6">6</a>
+					<a href="javascript:;" class="btn-a7">7</a>
+					<a href="javascript:;" class="btn-a8">8</a>
+					<a href="javascript:;" class="btn-a9">9</a>
+				</div>
+				<div class="b-button-under">
+				</div>
+			</div> 
+
+
+			<button class="b-side b-side-left hide">
+				<svg class="b-side-left-svg" width="16" height="30" xmlns="http://www.w3.org/2000/svg">
+					<path class="arrow-left" d="M13.92,27a1,1,0,0,1-.71-.29L0,13.5,13.21.29a1,1,0,0,1,1.41,1.41L2.83,13.5,14.62,25.3A1,1,0,0,1,13.92,27Z"></path>
+				</svg>
+			</button>
+
+			<button class="b-side b-side-right hide">
+				<svg class="b-side-right-svg" width="16" height="30" xmlns="http://www.w3.org/2000/svg">
+					<path class="arrow-right" d="M1,27A1,1,0,0,1,.29,25.3L12.09,13.5.29,1.71A1,1,0,0,1,1.71.29L14.92,13.5,1.71,26.71A1,1,0,0,1,1,27Z"></path>
+				</svg>
+			</button> 
+
+			
+			
+			
+		</div>
+		
+	</div>
+	
+
+
+	<!-- 内容区 -->
+	<ul class="m-content">
+		<li class="m-one">
+			
+			<ul class="m-one-block hide">
+				
+				<li class="m-one-block1">
+						<h3>简 历</h3>
+						<div class="m-one-img-box">
+							<img class="m-one-img1" src="img/HolyokeHirsch_10_thumb.jpg" alt="">
+							<img class="m-one-img2" src="img/Mortensen_10_thumb.jpg" alt="">
+							<img class="m-one-img3" src="img/Muccioli_10_thumb.jpg" alt="">
+						</div>
+				</li>
+				
+				<li class="m-one-block2">
+					<div class="m-one-outer clearfix">
+						<div class="m-one-imgs m-one-img4"></div>
+						<div class="m-one-p m-one-p1">
+							<p class="p-title">One.简历</p>
+							<p class="p-class">个人信息</p><br />
+							<p class="p-a">姓名：徐明云</p><br />
+							<p class="p-b">性别：男</p><br />
+							<p class="p-b">年龄：24</p><br />
+							<p class="p-b">学历：本科</p><br />
+						</div>
+					</div>
+				</li>
+				
+				<li class="m-one-block3">
+					<div class="m-one-outer clearfix">
+						<div class="m-one-imgs m-one-img5"></div>
+							<div class="m-one-p m-one-p2">
+								<p class="p-title">One.简历</p>
+								<p class="p-class">联系方式</p><br />
+								<p class="p-b">现居地：杭州</p><br />
+								<p class="p-b">电话：18814926617</p><br />
+								<p class="p-b">邮箱：akirakumo@foxmail.com</p><br />
+							</div>	
+					</div>					
+				</li>
+
+				<li class="m-one-block4">
+					<div class="m-one-outer clearfix">
+						<div class="m-one-imgs m-one-img6"></div>
+						<div class="m-one-p m-one-p3">
+							<p class="p-title">One.简历</p>
+							<p class="p-class">职业技能</p>
+							<p class="p-c">前端语言：HTML5、CSS\CSS3、JavaScript、jQuery、Bootstrap、Less、Vue.js、Webpack</p>
+							<p class="p-c">编辑器：Sublime text、Hbuilder、Eclipse</p>
+							<p class="p-c">其他：Photoshop、git、JAVA</p>							
+						</div>
+					</div>
+				</li>
+
+				<li class="m-one-block6">
+					<div class="m-one-outer clearfix">
+						<div class="m-one-imgs m-one-img9"></div>
+						<div class="m-one-p m-one-p5">
+							<p class="p-title">One.简历</p>
+							<p class="p-class">工作经历</p><br />
+							<p class="p-b">浙江同台网络科技有限公司</p><span class="span-b">Web前端开发</span>
+							<p class="p-d">在工作中主要负责项目页面实现和数据渲染。完成与后端的接口对接，配合后端的对接联调，解决不同浏览器兼容问题。利用H5和CSS3搭建页面布局，jQuery实现页面动画和交互。
+同时在工作中使用到了Less来编写CSS文件，提高CSS代码的编写效率，利于后期维护。在前后端交互中对JAVA也有了一定的了解。</p>
+							<p></p>
+						</div>
+					</div>
+				</li>
+
+				<li class="m-one-block6">
+					<div class="m-one-outer clearfix">
+						<div class="m-one-imgs m-one-img8"></div>
+						<div class="m-one-p m-one-p5">
+							<p class="p-title">One.简历</p>
+							<p class="p-class">项目经历</p><br />
+							<p class="p-b">项目名称：</p><span class="span-b">同台网（http://www.zjttmall.com/）</span>
+							<p class="p-d">该项目主要用H5+CSS3搭建页面布局jQuery完成动画与交互，准确还原了视觉稿，实现了了轮播、tab切换、导航下拉、登陆/注册等功能。
+在开发过程中对JS代码的优化、后端JAVA代码的实现原理有了新的认识。
+							</p>
+						</div>
+					</div>
+				</li>
+				
+
+				<li class="m-one-block5">
+					<div class="m-one-outer clearfix">
+						<div class="m-one-imgs m-one-img7"></div>
+						<div class="m-one-p m-one-p4">
+							<p class="p-title">One.简历</p>
+							<p class="p-class">项目经历</p><br />
+							<p class="p-b">项目名称：</p><span class="span-b">网易教育产品部页面</span>
+							<p class="p-d">该项目主要通过H5+CSS3+JS+AJAX完成网易教育产品部页面的开发，依照页面视觉说明，完整还原页面视觉效果，依照交互说明完成页面交互效果，项目实现了前后端交互、关注/登陆、轮播、tab切换、详情、视频等功能。</p>
+							<p></p>
+						</div>
+					</div>
+				</li>
+				
+				<li class="m-one-block6">
+					<div class="m-one-outer clearfix">
+						<div class="m-one-imgs m-one-img8"></div>
+						<div class="m-one-p m-one-p5">
+							<p class="p-title">One.简历</p>
+							<p class="p-class">项目经历</p><br />
+							<p class="p-b">项目名称：</p><span class="span-b">Zoimii</span>
+							<p class="p-d">该项目主要使用H5+CSS3搭建页面布局，CSS3和jQuery渲染动画。项目页面主要通过个人编写的banner组件分成若干个模块来展示个人作品。
+项目中使用到了svg和canvas，对矢量图形和图画绘制有了熟练的运用和深刻的理解。
+							</p>
+						</div>
+					</div>
+				</li>
+				
+				<li class="m-one-block7">
+					<div class="m-one-outer clearfix">
+						<div class="m-one-imgs m-one-img9"></div>
+						<div class="m-one-p m-one-p6">
+							<p class="p-title">One.简历</p>
+							<p class="p-class">自我简介</p><br />
+							<p class="p-d">熟悉W3C标准，拥有jQuery项目经验，熟练掌握H5+CSS3和Bootstrap框架的布局方式，熟悉vue.js和Webpack的使用，熟练掌握git版本控制工具的使用，对主流浏览器的兼容有一定的了解和解决的经验。在前端开发及学习中，让我变得更有耐心，思维更活跃，也培养了我独立思考和自主学习的能力，在团队工作中能够充分沟通、相互协作。</p>
+							<p class="p-b">——写代码使我快乐！</p>
+						</div>
+					</div>
+				</li>
+				
+				<li class="m-one-last">
+					<div class="m-one-outer clearfix">
+						<div class="m-one-last-left">
+							<h3>Telphone:</h3>
+							<div class="m-one-last-inleft">
+								<p>18814926617</p>
+							</div>
+						</div>
+						<div class="m-one-last-right">
+							<h3>E-mail:</h3>
+							<div class="m-one-last-inright1">
+								<p>akirakumo@foxmail.com</p>
+							</div>
+							<div class="m-one-last-inright2">
+								<textarea>akirakumo@foxmail.com</textarea>
+							</div>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+			
+
+			
+
+			
+
+
+		</li>
+		<li class="m-two">
+			<div class="m-snake hide">
+				<canvas id="snakes" height="500" width="800"></canvas>
+				<button class="start-snakes">开始游戏!!</button>
+				<div class="retry-snakes-outer hide">
+					<p>GAME</p>
+					<p>OVER</p>
+					<button class="retry-snakes">+1S</button>
+					<button class="close-snakes">不玩了!</button>
+				</div>
+			</div>
+			
+		</li>
+		
+		<li class="m-three">
+				<div class="work">
+					施工中…
+				</div>
+				<div class="m-three-lunch hide">
+						<img src="svg/m-three-svg-1.svg" alt="" class="m-three-svg-1">
+						<img src="svg/m-three-svg-2.svg" alt="" class="m-three-svg-2">
+						<img src="svg/m-three-svg-3.svg" alt="" class="m-three-svg-3">
+						<img src="svg/m-three-svg-4.svg" alt="" class="m-three-svg-4">
+						<img src="svg/m-three-svg-5.svg" alt="" class="m-three-svg-5">
+						<img src="svg/m-three-svg-6.svg" alt="" class="m-three-svg-6">
+						<img src="svg/m-three-svg-7.svg" alt="" class="m-three-svg-7">
+						<img src="svg/m-three-svg-8.svg" alt="" class="m-three-svg-8">
+						<img src="svg/m-three-svg-9.svg" alt="" class="m-three-svg-9">
+						<img src="svg/m-three-svg-10.svg" alt="" class="m-three-svg-10">		
+				</div>
+		</li>
+		
+		<li class="m-four">
+			<div>
+				<div class="work">
+					施工中…
+				</div>
+			</div>
+		</li>
+		<li class="m-five">
+			<div>
+				<div class="work">
+					施工中…
+				</div>
+			</div>
+		</li>
+		<li class="m-six">
+			<div>
+				<div class="work">
+					施工中…
+				</div>
+			</div>
+		</li>
+		<li class="m-seven">
+			<div>
+				<div class="work">
+					施工中…
+				</div>
+			</div>
+		</li>
+		<li class="m-eight">
+			<div>
+				<div class="work">
+					施工中…
+				</div>
+			</div>
+		</li>
+		<li class="m-nine">
+			<div>
+				<div class="work">
+					施工中…
+				</div>
+			</div>
+		</li>
+	</ul>
+
+
+	<script src="js/canvas-nest.min.js"></script>
+	<script src="js/jquery-3.2.1.js"></script>
+	<script src="js/zoimii.js"></script> 
+</body>
+</html>
