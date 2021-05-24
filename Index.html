@@ -1,561 +1,415 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>zoimii</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-	<link rel="stylesheet" href="css/zoimii.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>zoimii</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-1.11.1.min.js"></script> 
+    <script src="js/zoimii.js"></script>
+    <style>
+        .bofy{
+            position: absolute;
+            top: 220px;
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    </style>
 </head>
 <body>
-	<!-- 背景canvas -->
-	<canvas height="926" width="1920" id="c_n1"></canvas>
-	<!-- <div id="m-mask"></div> -->
-
-	<div class="welcome-words">
-		<p class="p1">Welcome</p>
-		<p class="p2">to</p>
-		<p class="p3">Zoimii</p>
-	</div>
-
-
-
-
-	<!-- 导航栏start -->
-	<div class="nav clearfix">
-
-		<!-- logo -->
-		<div class="nav-logo">
-			<img src="svg/zoimii.svg" alt="" class="nav-logo-svg">
-		</div>
-
-		<!-- 右上角菜单开关按钮 -->
-		<div class="nav-menu">
-			<svg class="nav-menu-svg" width="24" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.5 20.14">
-	            <g>
-	            	<path class="nav-menu-svg1" d="M25.5,2H1A1,1,0,0,1,1,0H25.5a1,1,0,0,1,0,2Z"></path>
-					<path class="nav-menu-svg2" d="M25.5,10.07H1a1,1,0,1,1,0-2H25.5a1,1,0,1,1,0,2Z"></path>
-					<path class="nav-menu-svg3" d="M25.5,18.14H1a1,1,0,0,1,0-2H25.5a1,1,0,0,1,0,2Z"></path>
-	            </g>
-	        </svg>
-	        <svg class="nav-menu-svg-close hide" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22">
-	            <g>
-	              <path d="M10.5,11.92.29,1.71A1,1,0,0,1,1.71.29l8.8,8.79L19.3.29a1,1,0,0,1,1.41,1.41Z"></path>
-	              <path d="M20,21a1,1,0,0,1-.71-.29l-8.8-8.79-8.8,8.79A1,1,0,0,1,.29,19.3L10.5,9.09,20.71,19.3A1,1,0,0,1,20,21Z"></path>
-	            </g>
-        	</svg>
-		</div>
-
-		<!-- 下拉菜单start -->
-		<div class="nav-menu-main hide">
-
-			<div class="nav-menu-title hide">
-				<p class="active">Website</p>
-				<span>/</span>
-				<p>About</p>
-			</div>
-
-			<div class="nav-menu-content hide">
-
-				<table class="nav-menu-web">
-					<tr>
-						<td>
-							<a href="https://www.baidu.com" target="_blank">百度一下,你就知道</a>
-						</td>
-						<td>
-							<a href="https://www.google.hk" target="_blank">Google一下,Not Found</a>
-						</td>
-						<td>
-							<a href="http://cn.bing.com/" target="_blank">必应 bing</a>
-						</td>
-						<td>
-							<a href="https://www.yahoo.com/" target="_blank">雅虎 yahoo！</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="https://www.bilibili.com" target="_blank">bilibili(゜-゜)つロ 干杯~</title></a>
-						</td>
-						<td>
-							<a href="http://www.acfun.cn/" target="_blank">猴山ACFun</a>
-						</td>
-						<td>
-							<a href="https://www.youtube.com" target="_blank">YouTube-你,管</a>
-						</td>
-						<td>
-							<a href="http://www.nicovideo.jp/" target="_blank">niconico动画</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="https://twitter.com/" target="_blank">推特-聚焦当下</a>
-						</td>
-						<td>
-							<a href="https://weibo.com" target="_blank">新浪微博-发现新鲜事</a>
-						</td>
-						<td>
-							<a href="https://www.facebook.com/" target="_blank">Facebook,现充的世界</a>
-						</td>
-						<td>
-							<a href="https://www.bilibili.com" target="_blank">盛大招商,财富共享</a>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<a href="https://www.bilibili.com" target="_blank">广告招商,全场热链</a>
-						</td>
-						<td>
-							<a href="https://www.bilibili.com" target="_blank">一次招商,四大受益</a>
-						</td>
-						<td>
-							<a href="https://www.bilibili.com" target="_blank">盛大招商,财富共享</a>
-						</td>
-						<td>
-							<a href="https://www.bilibili.com" target="_blank">一次招商,四大受益</a>
-						</td>
-					</tr>
-						<tr>
-						<td>
-							<a href="https://www.bilibili.com" target="_blank">广告招商,全场热链</a>
-						</td>
-						<td>
-							<a href="https://www.bilibili.com" target="_blank">一次招商,四大受益</a>
-						</td>
-						<td>
-							<a href="https://www.bilibili.com" target="_blank">盛大招商,财富共享</a>
-						</td>
-					</tr>				
-				</table>
-
-				<div class="nav-menu-about hide">
-					<div>
-						<h3>What Is This?</h3>
-						<p>一个用尽了毕生智慧敲出来的网站网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍网站介绍</p>
-						<a href="https://weibo.com/616710442" target="_blank">@死宅不要整天做梦</a><span>的微博</span>
-					</div>
-				</div>
-
-			</div> 
-
-		</div>
-		<!-- 下拉菜单end -->
-
-		<!-- 内容区关闭按钮 -->
-		<button class="m-close">
-			<svg class="m-close-svg" viewBox="0 0 21 21" version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
-				<path d="M10.5,11.92.29,1.71A1,1,0,0,1,1.71.29l8.8,8.79L19.3.29a1,1,0,0,1,1.41,1.41Z"></path>
-				<path d="M20,21a1,1,0,0,1-.71-.29l-8.8-8.79-8.8,8.79A1,1,0,0,1,.29,19.3L10.5,9.09,20.71,19.3A1,1,0,0,1,20,21Z"></path>
-			</svg>
-		</button>
-
-	</div>
-	<!-- 导航栏end -->
-
-
-
-	<!-- 主内容区 -->
-	<div class="main">
-
-		<!-- 内容区banner -->
-		<div class="banner">
-
-			<ul class="b-content clearfix">
-
-				<li class="b-one con-selected">			
-					<div class="title" style="font-size:100px;">
-						<h2>简 历<h3 style="font-size:22px;">了解一下</h3></h2>
-					</div>
-					<div class="num">
-						<h2>One</h2>
-					</div>
-					<div class="b-one-img1">
-						<div class="photo"><p>照片</p></div>
-						<div class="block1"></div>
-						<div class="block2"></div>
-						<div class="block3"></div>
-					</div>
-					<div class="b-one-img2">
-						<div class="info">
-							<p>姓名:__________</p>
-							<p>性别:__________</p>
-							<p>年龄:__________</p>
-							<p>联系:__________</p>
-						</div>
-					</div>
-				</li>
-				
-				<li class="b-two">
-					<div class="title">
-						<h2>玩个蛇</h2>
-					</div>
-					<div class="num">
-						<h2>Two</h2>
-					</div>
-					<div class="b-two-titAnime hide">
-						<div class="die-svg">
-							<img src="svg/die-svg1.svg" alt="" class="die-svg1">							
-							<img src="svg/die-svg2.svg" alt="" class="die-svg2">
-						</div>
-						<div class="b-two-snake">
-							<div></div><div></div><div></div><div></div><div></div><div></div>
-						</div>
-					</div>
-				</li>
-
-				<li class="b-three">
-
-					<div class="title">
-						中午吃什么
-					</div>
-
-					<div class="num">
-						Three
-					</div>
-
-				</li>
-
-				<li class="b-four">
-
-					<div class="title">
-						晚上吃什么
-					</div>
-
-					<div class="num">
-						Four
-					</div>
-
-				</li>
-
-				<li class="b-five">
-
-					<div class="title">
-						听个歌
-					</div>
-
-					<div class="num">
-						Five
-					</div>
-
-				</li>
-
-				<li class="b-six">
-
-					<div class="title">
-						看个戏
-					</div>
-
-					<div class="num">
-						Six
-					</div>
-
-				</li>
-
-				<li class="b-seven">
-
-					<div class="title">
-						瘫会儿
-					</div>
-
-					<div class="num">
-						Seven
-					</div>
-
-				</li>
-
-				<li class="b-eight">
-
-					<div class="title">
-						瘫会儿
-					</div>
-
-					<div class="num">
-						Eight
-					</div>
-
-				</li>
-
-				<li class="b-nine">
-
-					<div class="title">
-						瘫会儿
-					</div>
-
-					<div class="num">
-						Nine
-					</div>
-
-				</li>
-
-			</ul>
-
-			<div class="b-button clearfix">
-				<div class="b-button-btn clearfix">
-					<a href="javascript:;" class="btn-a1 btn-selected">1</a>
-					<a href="javascript:;" class="btn-a2">2</a>
-					<a href="javascript:;" class="btn-a3">3</a>
-					<a href="javascript:;" class="btn-a4">4</a>
-					<a href="javascript:;" class="btn-a5">5</a>
-					<a href="javascript:;" class="btn-a6">6</a>
-					<a href="javascript:;" class="btn-a7">7</a>
-					<a href="javascript:;" class="btn-a8">8</a>
-					<a href="javascript:;" class="btn-a9">9</a>
-				</div>
-				<div class="b-button-under">
-				</div>
-			</div> 
-
-
-			<button class="b-side b-side-left hide">
-				<svg class="b-side-left-svg" width="16" height="30" xmlns="http://www.w3.org/2000/svg">
-					<path class="arrow-left" d="M13.92,27a1,1,0,0,1-.71-.29L0,13.5,13.21.29a1,1,0,0,1,1.41,1.41L2.83,13.5,14.62,25.3A1,1,0,0,1,13.92,27Z"></path>
-				</svg>
-			</button>
-
-			<button class="b-side b-side-right hide">
-				<svg class="b-side-right-svg" width="16" height="30" xmlns="http://www.w3.org/2000/svg">
-					<path class="arrow-right" d="M1,27A1,1,0,0,1,.29,25.3L12.09,13.5.29,1.71A1,1,0,0,1,1.71.29L14.92,13.5,1.71,26.71A1,1,0,0,1,1,27Z"></path>
-				</svg>
-			</button> 
-
-			
-			
-			
-		</div>
-		
-	</div>
-	
-
-
-	<!-- 内容区 -->
-	<ul class="m-content">
-		<li class="m-one">
-			
-			<ul class="m-one-block hide">
-				
-				<li class="m-one-block1">
-						<h3>简 历</h3>
-						<div class="m-one-img-box">
-							<img class="m-one-img1" src="img/HolyokeHirsch_10_thumb.jpg" alt="">
-							<img class="m-one-img2" src="img/Mortensen_10_thumb.jpg" alt="">
-							<img class="m-one-img3" src="img/Muccioli_10_thumb.jpg" alt="">
-						</div>
-				</li>
-				
-				<li class="m-one-block2">
-					<div class="m-one-outer clearfix">
-						<div class="m-one-imgs m-one-img4"></div>
-						<div class="m-one-p m-one-p1">
-							<p class="p-title">One.简历</p>
-							<p class="p-class">个人信息</p><br />
-							<p class="p-a">姓名：徐明云</p><br />
-							<p class="p-b">性别：男</p><br />
-							<p class="p-b">年龄：24</p><br />
-							<p class="p-b">学历：本科</p><br />
-						</div>
-					</div>
-				</li>
-				
-				<li class="m-one-block3">
-					<div class="m-one-outer clearfix">
-						<div class="m-one-imgs m-one-img5"></div>
-							<div class="m-one-p m-one-p2">
-								<p class="p-title">One.简历</p>
-								<p class="p-class">联系方式</p><br />
-								<p class="p-b">现居地：杭州</p><br />
-								<p class="p-b">电话：18814926617</p><br />
-								<p class="p-b">邮箱：akirakumo@foxmail.com</p><br />
-							</div>	
-					</div>					
-				</li>
-
-				<li class="m-one-block4">
-					<div class="m-one-outer clearfix">
-						<div class="m-one-imgs m-one-img6"></div>
-						<div class="m-one-p m-one-p3">
-							<p class="p-title">One.简历</p>
-							<p class="p-class">职业技能</p>
-							<p class="p-c">前端语言：HTML5、CSS\CSS3、JavaScript、jQuery、Bootstrap、Less、Vue.js、Webpack</p>
-							<p class="p-c">编辑器：Sublime text、Hbuilder、Eclipse</p>
-							<p class="p-c">其他：Photoshop、git、JAVA</p>							
-						</div>
-					</div>
-				</li>
-
-				<li class="m-one-block6">
-					<div class="m-one-outer clearfix">
-						<div class="m-one-imgs m-one-img9"></div>
-						<div class="m-one-p m-one-p5">
-							<p class="p-title">One.简历</p>
-							<p class="p-class">工作经历</p><br />
-							<p class="p-b">浙江同台网络科技有限公司</p><span class="span-b">Web前端开发</span>
-							<p class="p-d">在工作中主要负责项目页面实现和数据渲染。完成与后端的接口对接，配合后端的对接联调，解决不同浏览器兼容问题。利用H5和CSS3搭建页面布局，jQuery实现页面动画和交互。
-同时在工作中使用到了Less来编写CSS文件，提高CSS代码的编写效率，利于后期维护。在前后端交互中对JAVA也有了一定的了解。</p>
-							<p></p>
-						</div>
-					</div>
-				</li>
-
-				<li class="m-one-block6">
-					<div class="m-one-outer clearfix">
-						<div class="m-one-imgs m-one-img8"></div>
-						<div class="m-one-p m-one-p5">
-							<p class="p-title">One.简历</p>
-							<p class="p-class">项目经历</p><br />
-							<p class="p-b">项目名称：</p><span class="span-b">同台网（http://www.zjttmall.com/）</span>
-							<p class="p-d">该项目主要用H5+CSS3搭建页面布局jQuery完成动画与交互，准确还原了视觉稿，实现了了轮播、tab切换、导航下拉、登陆/注册等功能。
-在开发过程中对JS代码的优化、后端JAVA代码的实现原理有了新的认识。
-							</p>
-						</div>
-					</div>
-				</li>
-				
-
-				<li class="m-one-block5">
-					<div class="m-one-outer clearfix">
-						<div class="m-one-imgs m-one-img7"></div>
-						<div class="m-one-p m-one-p4">
-							<p class="p-title">One.简历</p>
-							<p class="p-class">项目经历</p><br />
-							<p class="p-b">项目名称：</p><span class="span-b">网易教育产品部页面</span>
-							<p class="p-d">该项目主要通过H5+CSS3+JS+AJAX完成网易教育产品部页面的开发，依照页面视觉说明，完整还原页面视觉效果，依照交互说明完成页面交互效果，项目实现了前后端交互、关注/登陆、轮播、tab切换、详情、视频等功能。</p>
-							<p></p>
-						</div>
-					</div>
-				</li>
-				
-				<li class="m-one-block6">
-					<div class="m-one-outer clearfix">
-						<div class="m-one-imgs m-one-img8"></div>
-						<div class="m-one-p m-one-p5">
-							<p class="p-title">One.简历</p>
-							<p class="p-class">项目经历</p><br />
-							<p class="p-b">项目名称：</p><span class="span-b">Zoimii</span>
-							<p class="p-d">该项目主要使用H5+CSS3搭建页面布局，CSS3和jQuery渲染动画。项目页面主要通过个人编写的banner组件分成若干个模块来展示个人作品。
-项目中使用到了svg和canvas，对矢量图形和图画绘制有了熟练的运用和深刻的理解。
-							</p>
-						</div>
-					</div>
-				</li>
-				
-				<li class="m-one-block7">
-					<div class="m-one-outer clearfix">
-						<div class="m-one-imgs m-one-img9"></div>
-						<div class="m-one-p m-one-p6">
-							<p class="p-title">One.简历</p>
-							<p class="p-class">自我简介</p><br />
-							<p class="p-d">熟悉W3C标准，拥有jQuery项目经验，熟练掌握H5+CSS3和Bootstrap框架的布局方式，熟悉vue.js和Webpack的使用，熟练掌握git版本控制工具的使用，对主流浏览器的兼容有一定的了解和解决的经验。在前端开发及学习中，让我变得更有耐心，思维更活跃，也培养了我独立思考和自主学习的能力，在团队工作中能够充分沟通、相互协作。</p>
-							<p class="p-b">——写代码使我快乐！</p>
-						</div>
-					</div>
-				</li>
-				
-				<li class="m-one-last">
-					<div class="m-one-outer clearfix">
-						<div class="m-one-last-left">
-							<h3>Telphone:</h3>
-							<div class="m-one-last-inleft">
-								<p>18814926617</p>
-							</div>
-						</div>
-						<div class="m-one-last-right">
-							<h3>E-mail:</h3>
-							<div class="m-one-last-inright1">
-								<p>akirakumo@foxmail.com</p>
-							</div>
-							<div class="m-one-last-inright2">
-								<textarea>akirakumo@foxmail.com</textarea>
-							</div>
-						</div>
-					</div>
-				</li>
-
-			</ul>
-			
-
-			
-
-			
-
-
-		</li>
-		<li class="m-two">
-			<div class="m-snake hide">
-				<canvas id="snakes" height="500" width="800"></canvas>
-				<button class="start-snakes">开始游戏!!</button>
-				<div class="retry-snakes-outer hide">
-					<p>GAME</p>
-					<p>OVER</p>
-					<button class="retry-snakes">+1S</button>
-					<button class="close-snakes">不玩了!</button>
-				</div>
-			</div>
-			
-		</li>
-		
-		<li class="m-three">
-				<div class="work">
-					施工中…
-				</div>
-				<div class="m-three-lunch hide">
-						<img src="svg/m-three-svg-1.svg" alt="" class="m-three-svg-1">
-						<img src="svg/m-three-svg-2.svg" alt="" class="m-three-svg-2">
-						<img src="svg/m-three-svg-3.svg" alt="" class="m-three-svg-3">
-						<img src="svg/m-three-svg-4.svg" alt="" class="m-three-svg-4">
-						<img src="svg/m-three-svg-5.svg" alt="" class="m-three-svg-5">
-						<img src="svg/m-three-svg-6.svg" alt="" class="m-three-svg-6">
-						<img src="svg/m-three-svg-7.svg" alt="" class="m-three-svg-7">
-						<img src="svg/m-three-svg-8.svg" alt="" class="m-three-svg-8">
-						<img src="svg/m-three-svg-9.svg" alt="" class="m-three-svg-9">
-						<img src="svg/m-three-svg-10.svg" alt="" class="m-three-svg-10">		
-				</div>
-		</li>
-		
-		<li class="m-four">
-			<div>
-				<div class="work">
-					施工中…
-				</div>
-			</div>
-		</li>
-		<li class="m-five">
-			<div>
-				<div class="work">
-					施工中…
-				</div>
-			</div>
-		</li>
-		<li class="m-six">
-			<div>
-				<div class="work">
-					施工中…
-				</div>
-			</div>
-		</li>
-		<li class="m-seven">
-			<div>
-				<div class="work">
-					施工中…
-				</div>
-			</div>
-		</li>
-		<li class="m-eight">
-			<div>
-				<div class="work">
-					施工中…
-				</div>
-			</div>
-		</li>
-		<li class="m-nine">
-			<div>
-				<div class="work">
-					施工中…
-				</div>
-			</div>
-		</li>
-	</ul>
-
-
-	<script src="js/canvas-nest.min.js"></script>
-	<script src="js/jquery-3.2.1.js"></script>
-	<script src="js/zoimii.js"></script> 
+    <div class="head-outer">
+        <div class="head-box">
+            <div class="head-btn-close">
+                <svg class="head-btn-close-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 21 21">
+                    <path d="M10.5,11.92.29,1.71A1,1,0,0,1,1.71.29l8.8,8.79L19.3.29a1,1,0,0,1,1.41,1.41Z"></path>
+                    <path d="M20,21a1,1,0,0,1-.71-.29l-8.8-8.79-8.8,8.79A1,1,0,0,1,.29,19.3L10.5,9.09,20.71,19.3A1,1,0,0,1,20,21Z"></path>
+                </svg>
+            </div>
+            <div class="head-logo">zoimii</div>
+            <div class="head-btn-menu">
+                <svg class="head-btn-menu-svg" width="24" height="25" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.5 18.14">
+                    <g>
+                        <g>
+                            <path class="head-btn-menu-svg-1" d="M25.5,2H1A1,1,0,0,1,1,0H25.5a1,1,0,0,1,0,2Z"></path>
+                            <path class="head-btn-menu-svg-2" d="M25.5,10.07H1a1,1,0,1,1,0-2H25.5a1,1,0,1,1,0,2Z"></path>
+                            <path class="head-btn-menu-svg-3" d="M25.5,18.14H1a1,1,0,0,1,0-2H25.5a1,1,0,0,1,0,2Z"></path>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+        </div>
+    </div>
+    <div class="menu-box">
+        <p style="position: absolute;left: 50%;top: 50%;-webkit-transform: translate(-50%,-50%);transform: translate(-50%,-50%);">Merry Christmas</p>
+    </div>
+    <div class="main-box">
+        <div class="arrow-left arrow-left-show">
+            <svg class="arrow-left-svg" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.92 27">
+                <g>
+                    <g>
+                        <path class="arrow-left-shape" d="M13.92,27a1,1,0,0,1-.71-.29L0,13.5,13.21.29a1,1,0,0,1,1.41,1.41L2.83,13.5,14.62,25.3A1,1,0,0,1,13.92,27Z"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="arrow-right arrow-right-show">
+            <svg class="arrow-right-svg" width="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.92 27">
+                <g>
+                    <g>
+                        <path class="arrow-right-shape" d="M1,27A1,1,0,0,1,.29,25.3L12.09,13.5.29,1.71A1,1,0,0,1,1.71.29L14.92,13.5,1.71,26.71A1,1,0,0,1,1,27Z"></path>
+                    </g>
+                </g>
+            </svg>
+        </div>
+        <div class="swiper">
+            <div class="item">
+                <div class="item-content" data="0" data-lock="0">
+                    <div class="item-bg"></div>
+                    <div class="item-head">
+                        <span class="item-tit">ONE</span>
+                        <span class="item-cta">3D造云平台</span>
+                        <img class="img-top img-top-0-1" src="img/img_0_1_thumb.jpg">
+                        <img class="img-top img-top-0-2" src="img/img_0_2_thumb.jpg">
+                        <img class="img-top img-top-0-3" src="img/img_0_3_thumb.jpg">
+                    </div>
+                    <div class="item-body">
+                        <div class="item-body-head">
+                            <img class="item-body-head-bg" src="img/3dzao/4964b3_4088b4b0747f48fbac4338549987911d_mv2_d_3000_2000_s_2.webp">
+                        </div>
+                        <div class="item-body-content">
+                            <h2 class="item-body-tit">3D造云平台</h2>
+                            <p>3D造是一个供众多3D创客汇聚、学习、交流和分享的平台，这里汇聚海量高品质的3D数据模型，通过在线3D工具，为专业设计师提供360度全方位的支持，让3D打印充分辅助设计工作。同时，为大众用户提供技术支持，即使不会应用3D设计软件，也可以轻松享受3D打印带来的便捷。3D造可以让每一位普通用户或创客均可将自己的设计作品通过3D打印服务变现，整合软件与硬件，打造创新氛围的社区。</p>
+                        </div>
+                        <div class="item-body-img">
+                            <img class="item-body-img-project" src="img/3dzao/4964b3_a739f314af8642d986b898be06ed313d_mv2.webp">
+                        </div>
+                        <div class="item-body-content">
+                            <h2>项目背景</h2>
+                            <p>
+                                如今3D打印红遍了大江南北，不管是什么行业，想要制作什么样的个性产品，都可以利用3D打印技术实现。但是由于3D打印技术的前沿性，目前市场上服务工厂店质量参差不齐：                            
+                            <br>“我在一家工厂打印了数据模型，结果创意被剽窃了”
+                            <br>“之前做的3D打印成品太差了，完全不是我要的效果”                            
+                            <br>“我想设计属于自己独一无二的3D模型，但是我不会用那些软件”                            
+                            <br>……                            
+                            <br>爱好者们对3D打印很有兴趣，但是由于对软件技能不足只能望而却步；创客们有数据模型却苦于找不到靠谱的服务工厂，即使找到了，价格虚高不说，还有剽窃创意的危险；企业倒是可以找到服务工厂，但不管是传统企业还是创新企业，对打印材质及工艺都有极高的要求，普通服务工厂不一定能满足要求。
+                            </p>
+                            <h3>我们需要一个解决方案</h3>
+                            <h4>让3D打印如网购般便捷</h4>
+                            <img src="img/3dzao/4964b3_9954b2dc69eb45f283ac9f1ba79c479c_mv2.webp">
+                            <h2>设计方向探索</h2>
+                            <p>
+                                为了更好地了解目标用户，我们发起了一次问卷调查，并针对调查结果进行了一次用户访谈，深入了解用户的需求和痛点，寻找改进的机会。
+                            <br>另外，由于产品的平台化发展特性，我们选取了意造网、魔猴、未来工厂等平台化产品进行了分析，再结合之前版本的积累与项目的实际情况，我们为这次改版定了三个方向：
+                            </p>
+                            <ul>
+                                <li>核心功能突出，辅助功能入口统一</li>
+                                <li>信息层级清晰，架构层级扁平化</li>
+                                <li>设计风格跨平台统一</li>
+                            </ul>
+                            <img src="img/3dzao/4964b3_a5f3bf74deb24d858daa50d2e19750c1_mv2.webp">                          
+                        </div>
+                        <div class="item-body-img">
+                            <div class="item-body-img-people clearfix">
+                                <img src="img/3dzao/4964b3_3cfedf7358714164a6104993be2e0e0f_mv2.webp">
+                                <p>
+                                    信息：张明/31岁/工业设计师/精通大多数设计类软件                               
+                                <br>行为：每天早上阅读设计相关资讯/乐于分享自己的想法，经常与朋友沟通交流                                   
+                                <br>目标：分享原创3D模型／传播个人品牌/赚取工作之外的收益                                    
+                                <br>期望：更方便快速的打印出自己设计的模型／与志同道合的的朋友探讨心得                                    
+                                <br>痛点：找不到靠谱的3D打印工厂/担心创意被剽窃
+                                </p>
+                            </div>
+                            <div class="item-body-img-people clearfix">
+                                <img src="img/3dzao/4964b3_6288143a33e1470d9a36bfd488bfb890_mv2.webp">
+                                <p>
+                                    信息：刘云/22岁/大学生/设计爱好者
+                                <br>行为：在社交网络上十分活跃/关注最新潮流动态/关注很多设计大牛的微博
+                                <br>目标：个性化定制属于自己的产品/了解基础的3D打印知识/学习3D软件的基础用法
+                                <br>期望：找到心仪的3D数据模型/找到可以一起讨论学习的伙伴
+                                <br>痛点：不知道如何使用3D建模软件/找不到心仪的数据模型
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item-body-content">
+                            <h2>解决方案</h2>
+                            <p>基于前面的用研及竞品分析结果，我们与产品经理确定好核心流程，快速在纸上绘制好产品草图，并与开发同学进行了几次项目会议，考虑到我们对现有产品的理解，我们决定将其剥离到它的核心，围绕它的最常用的功能来定位整个产品.：</p>
+                            <img src="img/3dzao/4964b3_a2a4143c59a7496f8b7e05c51ff0368c_mv2_d_2679_1483_s_2.webp">
+                            <p>在项目早期，我们会在纸上画一些草图沟通想法，确定大方向，后期确认了需求后，以原型图的形式产出了关键的功能性页面，确定基本功能点，并做细节上的动态效果展示。原型图还可以用来辅助进行详细设计和开发的评审，同时细化功能，每天迭代更新。</p>
+                            <img src="img/3dzao/4964b3_23618ee9f39c4f2aa53659a75e58683a_mv2.webp">
+                            <a href="http://wbad91.axshare.com/" target="_blank"><span class="item-body-btn">查看交互原型</span></a>
+                        </div>
+                        <div class="item-body-img">
+                            <img class="item-body-img-comp" src="img/3dzao/4964b3_460d4c3f4b7e470aaa7455ac564f9246_mv2.webp">
+                        </div>
+                        <div class="item-body-content">
+                            <h2>项目总结</h2>
+                            <p>项目目前正在开发中，预计3月份完成，所以目前还不能展示太多细节内容，但是通过对已上线的新版首页进行数据埋点，我们发现各模块的数据点击率得到了大幅度的提升，同时从Alexa排名来看，3D造已处于国内3D打印行业的首位，这对我们团队的工作是一个很大的肯定。</p>
+                            <img src="img/3dzao/4964b3_5e8792435a9043bfa493b28dfbd18def_mv2.webp">
+                            <p class="annotate">新旧版本点击率对比</p>
+                        </div>
+                    </div>
+                    <div class="item-foot">
+                        <div class="item-foot-left">
+                            <p class="item-foot-tit">This:</p>
+                            <div class="item-foot-btn">3D造云平台</div>
+                        </div>
+                        <div class="item-foot-right">
+                            <p class="item-foot-tit">Link:</p>
+                            <div class="item-foot-btn" data="1">早范</div>
+                            <div class="item-foot-btn" data="2">柚理财</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content" data="1" data-lock="0">
+                    <div class="item-bg"></div>
+                    <div class="item-head">
+                        <span class="item-tit">TWO</span>
+                        <span class="item-cta">早范</span>
+                        <img class="img-top img-top-0-1" src="img/img_0_1_thumb.jpg">
+                        <img class="img-top img-top-0-2" src="img/img_0_2_thumb.jpg">
+                        <img class="img-top img-top-0-3" src="img/img_0_3_thumb.jpg">
+                    </div>
+                    <div class="item-body">
+                        <div class="item-body-head">
+                            <img class="item-body-head-bg" src="img/breakfast/4964b3_5f2f7efd462046b985a63edf39c69583_mv2_d_1920_1278_s_2.webp">
+                        </div>
+                        <div class="item-body-content">
+                            <h2 class="item-body-tit">早范</h2>
+                            <p>现在许多上班族和学生的时间安排都很紧凑，很多时候他们不得不牺牲“早餐这件小事”以获得足够的睡眠。然而，众所周知，不吃早餐会增加许多健康问题的风险。另一方面，即使大家注意到早餐的价值，人们对早餐的选择也是有限的，早范作为一个早餐配送平台，可以给工作节奏紧凑的上班族们提供新鲜、方便、丰富的早餐外卖，让他们在早餐上有更多选择。</p>
+                        </div>
+                        <div class="item-body-img" style="background-color: #bbd6c5;">
+                            <img class="item-body-img-project" src="img/breakfast/4964b3_3b6bf69028a242c3b25caa0391499698_mv2.webp">
+                        </div>
+                        <div class="item-body-content">
+                            <h2>用户研究</h2>
+                            <p>
+                                高节奏的城市生活使得时间管理更加重要。我们发起了一份关于上班族们对于早餐态度的问卷，回收了59份有效问卷，然后对5位用户进行了访谈，以了解人们对现有早餐的体验与想法：
+                            </p>
+                            <ul>
+                                <li>在那些没有坚持天天吃早饭的人群中，仅有41.3%的人表示愿意牺牲半个小时的睡眠时间来吃早饭</li>
+                                <li>越来越多人偏向于叫外卖，特别是在他们加班或者其他忙碌的时候</li>
+                                <li>他们点餐时，最关心的是食物的新鲜度，送达时间以及价格​</li>
+                            </ul>
+                            <img src="img/breakfast/4964b3_69172f4dcc0b411c8b8f4c639d98bc35_mv2.webp">
+                            <p>为了探索现实中会遇到的问题，我们对6个潜在用户进行了送餐服务。从我们的观察和一些事后的反馈，我们发现大多数用户希望能降低配送费以及希望菜单里有更多的早餐选择。</p>
+                            <img src="img/breakfast/4964b3_5805c23d30e14d97b990e66d0ff38946_mv2.webp">
+                            <p>
+                                接下来我们团队进行了头脑风暴，以简化最终用户体验为目标，我们确定了大致的方向：
+                            <br>菜单定制：所有的食谱是早范创建，目前不做特殊定制
+                            <br>派送服务：早范将与特定派送平台合作，为用户带来高效的派送服务
+                            <br>早餐价格：价格符合市场情况，能被绝大多数用户接受与认可
+                            <br>下单时间：用户最晚可以在前一天晚上十点前预订早餐
+                            </p>
+                            <p>我们希望为用户提供健康、新鲜的膳食，下单过程简单流畅，体验友好、并且价格合理。</p>
+                            <h2>价值定位</h2>
+                            <p>我们为用户提供一个简单方便的方式来解决他们的订购早餐问题。我们通过与特定的餐厅合作，为用户提供不同种类的早餐服务，同时收集用户的评价用以改进。用户只需下载早范App，在送餐的前一天晚上10:00前下单，第二天，早范的专业配送人员将会根据客户选择的时间准点地将早餐送到每一位用户的手上。</p>
+                            <img src="img/breakfast/4964b3_5a2fa541054a4239a7d93b4fd1c6d62f_mv2.webp">
+                            <h2>用户体验地图</h2>
+                            <p>为了更好地了解我们产品的交互和服务设计，我们创建了一个用户体验地图，以可视化的方式展示用户使用我们服务的从开始到结束的过程。</p>
+                            <img src="img/breakfast/4964b3_e7624867900a4935a63dc70d83f7870b_mv2_d_1813_1306_s_2.webp" alt="">
+                            <h2>解决方案</h2>
+                            <p>我们创建线框图来帮助我们设计用户体验，这将是我们的服务的一部分。我们对5个用户进行了几次可用性测试，并基于他们的反馈完善我们的产品。</p>  
+                        </div>
+                        <div class="item-body-img">
+                            <img class="item-body-img-UI" src="img/breakfast/4964b3_d00f1dd4fa294f2cad750daaa0dbfe3b_mv2_d_4032_3024_s_4_2.webp" alt="">
+                        </div>
+                        <div class="item-body-content">
+                            <p>我们创建线框图来帮助我们设计用户体验，这将是我们的服务的一部分。我们对5个用户进行了几次可用性测试，并基于他们的反馈完善我们的产品。</p>
+                        </div>
+                        <div class="item-body-gif">
+                            <img src="img/breakfast/4964b3_f0d9b24f2d3b4d6c8ed87cff04587260_mv2.gif" alt="">
+                            <img src="img/breakfast/4964b3_e79fe45df0f4462fa08ab89a6ece0f34_mv2.gif" alt="">
+                            <img src="img/breakfast/4964b3_8a1143f79c8e4e1da01f63f02e769b58_mv2.gif" alt="">
+                        </div>
+                    </div>
+                    <div class="item-foot">
+                        <div class="item-foot-left">
+                            <p class="item-foot-tit">This:</p>
+                            <div class="item-foot-btn">早范</div>
+                        </div>
+                        <div class="item-foot-right">
+                            <p class="item-foot-tit">Link:</p>
+                            <div class="item-foot-btn" data="0">3D造云平台</div>
+                            <div class="item-foot-btn" data="2">柚理财</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content" data="2" data-lock="0">
+                    <div class="item-bg"></div>
+                    <div class="item-head">
+                        <span class="item-tit">THREE</span>
+                        <span class="item-cta">柚理财</span>
+                        <img class="img-top img-top-0-1" src="img/img_0_1_thumb.jpg">
+                        <img class="img-top img-top-0-2" src="img/img_0_2_thumb.jpg">
+                        <img class="img-top img-top-0-3" src="img/img_0_3_thumb.jpg">
+                    </div>
+                    <div class="item-body">
+                        <div class="item-body-head">
+                            <img class="item-body-head-bg" src="img/ulicai/4964b3_5a9ffa6f185d4f24aca44c2bea39b544_mv2_d_2560_1440_s_2.webp">
+                        </div>
+                        <div class="item-body-content">
+                            <h2 class="item-body-tit">柚理财</h2>
+                            <p>柚理财作为一个可以为用户提供低门槛高收益安全便捷的理财服务的金融平台，经历近一年多时间的升级优化与业务路线的调整，承载的信息越来越多、功能越来越丰富，原有的框架设计已经不能很好的支持现有的产品功能了。我们打算在新版本针对现有问题重新定位理财端用户平台，并制定一条合理可行的产品演进路线并设计出目前所处阶段的全平台界面体验。</p>
+                        </div>
+                        <div class="item-body-img">
+                            <img class="item-body-img-project" src="img/ulicai/4964b3_685163c45b354ffaa78db10a2f0f43a1_mv2.webp">
+                        </div>
+                        <div class="item-body-content">
+                            <h2>需求分析</h2>
+                            <p>为了发掘成熟的个人财富管理方法和大众理财产品，我们首先将目光投向了金融业发展更早的国外。除了将 Betterment、Personal Capital、LendingClub等智能投资管理和个人财物管理平台细分为八种不同类型的公司分别进行研究，设计团队还在社交媒体上收集真实用户的使用体验，在财经和评测网站以及新闻报道中获取广泛的金融知识，从专业书籍和理财专家的博客中寻找对设计有帮助的信息。当看到越来越多的用户说：
+                            <br>
+                            <br>&nbsp;&nbsp;&nbsp;“I don’t adhere to the traditional idea of budgeting.”                            
+                            <br>&nbsp;&nbsp;&nbsp;“I need a program that caters to my needs of an overarching financial picture and long-term investment plan.”                            
+                            <br>&nbsp;&nbsp;&nbsp;“I need holistic financial planning.”
+                            <br>
+                            </p>
+                            <p>我们意识到，人们对理财产品的期望正在发生转变。人们拥有一定的理财观念、理财途径和工具，但大部分人仍然缺乏专业的金融知识，投资金额有限，并且对金融机构抱有怀疑态度。                           
+                            <br>研究国外竞品的同时，我们也在国内进行以专家访谈、用户研究和任务走查为核心的用户研究，了解柚理财用户的财富管理观念和理财现状。
+                            </p>       
+                        </div>
+                        <div class="item-body-img">
+                            <div class="item-body-img-people-type2">
+                                <img src="img/ulicai/4964b3_248102fe61c24328bebf61a61ccec041_mv2.webp" alt="">
+                                <p>
+                                    “我觉得理财的目的就是让财富增值、保值。”
+                                <br>“我没有太多的理财概念，只想要跑赢通胀。”
+                                <br>“P2P 尝鲜会买期限短的。”
+                                <br>“知道每天的收益都一样，但还是会去看，看到就很高兴。”
+                                <br>“我选择国外第三方机构主要考虑私密性、稳定性和收益。”
+                                </p>
+                            </div>
+                        </div>
+                        <div class="item-body-content">
+                            <h2>用户画像</h2>
+                            <p>
+                                我们产品的目标用户最多的都是在30~39这一年龄段，该年龄段的用户特征就是理财资金较充沛，在资产配置中寻求更丰富的组合。20~29这一年龄段为第二大目标用户群体，该群体的特征便是对互联网有广泛的了解，财富处于增长阶段，风险承受能力较强，发展潜力较大。
+                            <br>下面的用户画像，可以非常清楚地看到入门级理财用户和有一定经验理财用户的差异。入门级用户的风险承受能力和对收益性的期望较低，对资金流动性和安全性的要求高。而有经验的用户则有更高的风险承受能力，期望更高的收益，对资金的流动性和安全性的要求较低。
+                            </p>
+                            <img src="img/ulicai/4964b3_2a34e512cf254754919a2aee6e0adbc4_mv2.webp" alt="">
+                            <h2>机遇和挑战</h2>
+                            <p>通过全方位的用户研究以及竞品分析，我们发现柚理财在平台功能的转变、信任感和安全感的建立、服务个性化与服务升级、用户引导与教育以及产品细节处理上面临很多机遇和挑战。</p>                            
+                        </div>
+                        <div class="item-body-tips clearfix">
+                            <div class="item-body-tips-item">
+                                <p class="item-body-tips-num">1.</p>
+                                <p class="item-body-tips-word">理财产品用户希望收益处于合理区间，过高的收益反而会让他们觉得不安全。利用设计体现平台对安全的关注或进行实物化的保障等则可以提高用户对平台的信任感。</p>
+                            </div>
+                            <div class="item-body-tips-item">
+                                <p class="item-body-tips-num">2.</p>
+                                <p class="item-body-tips-word">面对银行较为综合的服务体系，以及会按照不同资产规模区分服务的压力，互联网理财产品应该尽快推出个性化服务。可以根据用户的投资偏好和风险承受能力推荐个性化的资产配比，也可以根据用户的投资行为、交易数据划分用户等级，提供不同的优惠与附加服务。</p>
+                            </div>
+                            <div class="item-body-tips-item">
+                                <p class="item-body-tips-num">3.</p>
+                                <p class="item-body-tips-word">一位有四年理财经验的已婚妈妈在访谈中提到了一个大多数用户都面临的问题：“买了基金、股票、邮票、银行理财产品等，但主要靠记忆管理”。分散投资型用户缺少有效的统一管理工具，需要第三方资产管理服务。那么未来，引入第三方资产数据，全面管理各类资产成为平台功能转变的一个机遇点。</p>
+                            </div>
+                        </div>
+                        <div class="item-body-content">
+                            <h2>设计过程</h2>
+                            <p>在第一阶段，我们整理出关于产品的大致想法与目标，与产品方确定好核心功能和流程，然后在纸上快速构建产品草图。此外，我们采访了相关领域的专家，如银行家或会计师，他们在金融领域具有专家级的知识和见解，可以给予我们关于产品设计的合理性的反馈。</p>
+                            <img src="img/ulicai/4964b3_843fd6bd3331494f92154d28c0732760_mv2.webp" alt="">
+                            <p class="annotate">体验金转入流程</p>
+                            <img src="img/ulicai/4964b3_e12c585ab9c84a5b82bef93389aab58c_mv2.webp" alt="">
+                            <p class="annotate">标的购买流程</p>
+                            <p>在验证我们的设计后，我们致力于创建一个粘性产品。我们阐述了应用程序的信息架构，并构建了包含我们之前工作的组合元素的中等保真原型。通过连续迭代，评审和用户测试，我们删除和修改了部分功能，并提高了可用性和用户体验。</p>
+                            <img src="img/ulicai/4964b3_ca14906c1dff48abb637e38c4c3546e9_mv2.webp" alt="">
+                            <p>我们完成原型设计后，招募了5个用户进行了简单的可用性测试。这使我们能够深入了解如何更好地改进我们的理财产品。然后我们总结测试结果，进行下一步的改进设计。总的来说，用户在我们的原型中发现了大量的价值，这验证了我们的概念和设计方向。</p>
+                            <img src="img/ulicai/4964b3_a5a5e8580a3b400498f827337a64a3f6_mv2_d_2866_1486_s_2.webp" alt="">
+                        </div>
+                        <div class="item-body-img">
+                            <img class="item-body-img-UI" src="img/ulicai/4964b3_ef086d79ca3546d3bbc885b913c438ca_mv2_d_3835_2877_s_4_2.webp" alt="">
+                        </div>
+                        <div class="item-body-content">
+                            <h2>A/B 测试</h2>
+                            <p>产品上线之后我们对新旧版本进行了A/B测试，以此来验证改版的设计是否合理，事实证明新版本在用户转化率上有了很大的提升。</p>
+                            <img src="img/ulicai/4964b3_1359020bff5e465c99d7ffb91364a68d_mv2_d_1733_1235_s_2.webp" alt="">
+                        </div>
+                        <div class="item-body-img no-margin">
+                            <h2>成果展示</h2>
+                            <div class="item-body-img-content clearfix">
+                                <div class="f-left"><h4>值得信赖的品牌体验</h4><p>互联网金融和传统银行相比，先天基因中就缺乏大众的信任。用户普遍存在操作频繁、追求短期利益、对安全感存疑等问题。我们利用设计的方法来帮助用户逐渐建立对品牌的信任感，包括突出资金流动透明性，如交易记录、资产分布、累计收益等。还通过设置安全密码保护、模糊多任务状态等细节丰富用户的安全体验。</p></div>
+                                <img class="f-right" src="img/ulicai/4964b3_302eed95882e4e29848274fa959ff9ee_mv2.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="item-body-content">
+                            <div class="item-body-img-content clearfix">
+                                <div class="f-right">
+                                    <h4>足够简单的应用结构</h4>
+                                    <p>在用户研究中，我们发现有明确理财需求的人年龄普遍在 30岁以上，核心人群年龄更高，他们在设计上非常追求简单直观容易操作。因此，我们精简了底层应用结构，划分为理财与账户两部分内容，产品呈现和操作也更加直接简单。</p>
+                                </div>
+                                <img class="f-left" src="img/ulicai/4964b3_4e38d0a28e464bf5b664b90615187ac1_mv2.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="item-body-img no-margin">
+                            <div class="item-body-img-content clearfix">
+                                <div class="f-left">
+                                    <h4>服务分级和服务个性化</h4>
+                                    <p>与传统银行相比，互联网金融平台普遍缺乏规范的服务体系和标准。传统银行对于银行用户的划分更细致和成熟，会针对不同层级的用户提供对应的服务和产品。我们提出了互联网金融平台服务分级和服务个性化的概念，并与会员体系结合在一起，帮助平台提高用户忠诚度。</p>
+                                </div>
+                                <img class="f-right" src="img/ulicai/4964b3_35a9156645ba41c883a7ec5b891234a6_mv2.webp" alt="">
+                            </div>
+                        </div>
+                        <div class="item-body-content">
+                            <div class="item-body-img-content clearfix">
+                                <div class="f-right">
+                                    <h4>透明的资金流入流出管理</h4>
+                                    <p>资金的流入流出是金融产品的核心操作流程。柚理财的散标和债券转让产品很受用户欢迎，但许多新标刚刚放出几秒就会被抢购一空。针对用户的这一行为特点，我们设计了快速抢购操作；除此之外，还对投资、退出、充值、提现等流程进行了优化，保证操作安全的基础上尽量减少操作步骤。</p>
+                                </div>
+                                <img class="f-left" src="img/ulicai/4964b3_4214fe3290a34de89bab6f1d2b676696_mv2.webp" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item-foot">
+                        <div class="item-foot-left">
+                            <p class="item-foot-tit">This:</p>
+                            <div class="item-foot-btn">柚理财</div>
+                        </div>
+                        <div class="item-foot-right">
+                            <p class="item-foot-tit">Link:</p>
+                            <div class="item-foot-btn" data="0">3D造云平台</div>
+                            <div class="item-foot-btn" data="1">早范</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="item-content" data="3" data-lock="1">
+                    <div class="item-bg"></div>
+                    <div class="item-head">
+                        <span class="item-tit">FOUR</span>
+                        <span class="item-cta">lock</span>
+                        <img class="img-top img-top-0-1" src="img/img_0_1_thumb.jpg">
+                        <img class="img-top img-top-0-2" src="img/img_0_2_thumb.jpg">
+                        <img class="img-top img-top-0-3" src="img/img_0_3_thumb.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bottom-box">
+        <ul class="bottom-banner">
+            <li class="this-banner" data="0">1</li>
+            <li data="1">2</li>
+            <li data="2">3</li>
+            <li data="3">4</li>
+            <span class="bottom-underline"></span>
+        </ul>
+    </div>
+    <div class="mask mask-pw">
+        <div class="pop-box">
+            <p class="pop-box-tit">Confirm</p>
+            <input class="pop-box-pw" type="text" placeholder="请输入密码">
+            <div class="pop-box-bottom clearfix">
+                <span class="pop-box-yes">确定</span>
+                <span class="pop-box-no">取消</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
